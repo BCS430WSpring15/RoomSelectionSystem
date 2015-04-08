@@ -9,6 +9,7 @@ import bcs430w.eaglesolutions.roomselectionsystem.controller.HousingApplicationC
 import bcs430w.eaglesolutions.roomselectionsystem.controller.LoginFrameController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.MainFrameController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.RoomSelectionFrameController;
+import bcs430w.eaglesolutions.roomselectionsystem.controller.SignUpStudentController;
 import bcs430w.eaglesolutions.roomselectionsystem.view.HousingApplicationView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.LoginFrameView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.MainFrameView;
@@ -34,6 +35,8 @@ public class Main {
         RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
         //roomSelectionFrameController.initializeView();
         HousingApplicationController housingApplicationController = new HousingApplicationController();
-        housingApplicationController.initializeView();
+        //housingApplicationController.initializeView();
+        SignUpStudentController signUpStudentController = new SignUpStudentController();
+        signUpStudentController.initializeView();
     }
 }
