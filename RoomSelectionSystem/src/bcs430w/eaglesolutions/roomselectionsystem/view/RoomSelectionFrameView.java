@@ -47,7 +47,7 @@ public class RoomSelectionFrameView extends JFrame{
         roomSelectionLabel = new JLabel("Room Selection");
         roomSelectionLabel.setFont(new Font("Tekton Pro", NORMAL, 30));
         
-        String[] buildingOptions = { "Orchard Hall", "Dewy Hall", "Alumni Hall"};
+        String[] buildingOptions = { "Orchard Hall", "Dewey Hall", "Alumni Hall"};
         String[] floorOptions = { "1", "2", "3", "4" };
         String[] suiteOptions = { "Four Person Suite", "Six Person Suite" };
         String[] roomOptions = { "4K03", "3K03", "2K03", "1K03" };

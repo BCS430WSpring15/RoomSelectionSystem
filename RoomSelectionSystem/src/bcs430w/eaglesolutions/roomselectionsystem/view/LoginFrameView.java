@@ -63,8 +63,8 @@ public class LoginFrameView extends JFrame{
         
         loginButton = new JButton("Login");
         
-        //constraints.weightx = 0.0001;
-        //constraints.weighty = 0.05;
+        //constraints.weightx = 0.5;
+        //constraints.weighty = 0.5;
         constraints.fill = GridBagConstraints.CENTER;
         constraints.gridx = 0;
         constraints.gridy = 0;
@@ -85,12 +85,12 @@ public class LoginFrameView extends JFrame{
         //constraints.weighty = 1;
         //constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 1;
-        constraints.gridy = 1;
+        //constraints.gridy = 1;
         loginPanel.add(username, constraints);
         
         //constraints.weightx = 0.5;
         //constraints.weighty = 1;
-        constraints.fill = GridBagConstraints.HORIZONTAL;
+        //constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 0;
         constraints.gridy = 2;
         loginPanel.add(passwordLabel, constraints);
@@ -99,12 +99,12 @@ public class LoginFrameView extends JFrame{
         //constraints.weighty = 1;
         //constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 1;
-        constraints.gridy = 2;
+        //constraints.gridy = 2;
         loginPanel.add(password, constraints);
         
         //constraints.weightx = 0.5;
         //constraints.weighty = 1;
-        constraints.fill = GridBagConstraints.HORIZONTAL;
+        //constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 0;
         constraints.gridy = 3;
         constraints.gridwidth = 2;
@@ -112,9 +112,9 @@ public class LoginFrameView extends JFrame{
         loginPanel.add(loginButton, constraints);
         
         constraints.fill = GridBagConstraints.CENTER;
-        constraints.gridx = 0;
+        //constraints.gridx = 0;
         constraints.gridy = 4;
-        constraints.gridwidth = 2;
+        //constraints.gridwidth = 2;
         constraints.insets = new Insets(10,0,0,0);
         loginPanel.add(forgotPassLabel, constraints);       
         
