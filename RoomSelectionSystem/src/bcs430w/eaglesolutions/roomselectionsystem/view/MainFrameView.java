@@ -10,7 +10,10 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.Point;
 import java.awt.Toolkit;
 import javax.swing.BorderFactory;
@@ -48,8 +51,8 @@ public class MainFrameView extends JFrame{
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
         
-        mainPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 15));
-        mainPanel.setSize(this.getSize());
+        mainPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints constraints = new GridBagConstraints();
         //mainPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
         //mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.PAGE_AXIS));
         //mainPanel.setLayout(new GridLayout(0,1));
@@ -77,20 +80,51 @@ public class MainFrameView extends JFrame{
         //goToRemoveStudent.setAlignmentX(Component.CENTER_ALIGNMENT);
         goToRemoveStudent.setPreferredSize(new Dimension(400, 30));
         
+        constraints.fill = GridBagConstraints.CENTER;
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.gridwidth = 1;
+        constraints.insets = new Insets(0,0,10,0);
+        mainPanel.add(welcomeLabel, constraints);
+        
+        //constraints.gridx = 0;
+        constraints.gridy = 1;
+        //constraints.gridwidth = 1;
+        constraints.insets = new Insets(10,0,10,0);
+        mainPanel.add(goToLogin, constraints);
+        
+        constraints.gridy = 2;
+        constraints.insets = new Insets(0,0,10,0);
+        mainPanel.add(goToRoomSelection, constraints);
+        
+        constraints.gridy = 3;
+        //constraints.insets = new Insets(0,0,10,0);
+        mainPanel.add(goToDormApplication, constraints);
+        
+        constraints.gridy = 4;
+        //constraints.insets = new Insets(0,0,10,0);
+        mainPanel.add(goToFinancialApplication, constraints);
+        
+        constraints.gridy = 5;
+        mainPanel.add(goToAddStudent, constraints);
+        
+        constraints.gridy = 6;
+        mainPanel.add(goToRemoveStudent, constraints);
+        
         //mainPanel.add(Box.createRigidArea(new Dimension(0, 40)));
-        mainPanel.add(welcomeLabel);
+        //mainPanel.add(welcomeLabel);
         //mainPanel.add(Box.createRigidArea(new Dimension(0, 20)));
-        mainPanel.add(goToLogin);
+        //mainPanel.add(goToLogin);
         //mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-        mainPanel.add(goToRoomSelection);
+        //mainPanel.add(goToRoomSelection);
         //mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-        mainPanel.add(goToDormApplication);
+        //mainPanel.add(goToDormApplication);
         //mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-        mainPanel.add(goToFinancialApplication);
+        //mainPanel.add(goToFinancialApplication);
         //mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-        mainPanel.add(goToAddStudent);
+        //mainPanel.add(goToAddStudent);
         //mainPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-        mainPanel.add(goToRemoveStudent);
+        //mainPanel.add(goToRemoveStudent);
         
         this.add(mainPanel);
     }
