@@ -264,9 +264,10 @@ public class HousingApplicationView extends JFrame{
         housingApplicationPanel.add(guardianSignatureDate, constraints);
         
         submitApplication = new JButton("        Submit        ");
-        constraints.fill = GridBagConstraints.NONE;
-        constraints.gridx = 3;
+        constraints.fill = GridBagConstraints.CENTER;
+        constraints.gridx = 0;
         constraints.gridy = 9;
+        constraints.gridwidth = 4;
         constraints.insets = new Insets(50,0,0,0);
         housingApplicationPanel.add(submitApplication, constraints);
         

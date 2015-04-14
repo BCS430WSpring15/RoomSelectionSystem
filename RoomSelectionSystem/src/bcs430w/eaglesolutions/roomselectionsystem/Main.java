@@ -43,6 +43,6 @@ public class Main {
         RemoveStudentController removeStudentController = new RemoveStudentController();
         //removeStudentController.initializeView();
         FinancialStatusController financialStatusController = new FinancialStatusController();
-        financialStatusController.initializeView();
+        //financialStatusController.initializeView();
     }
 }

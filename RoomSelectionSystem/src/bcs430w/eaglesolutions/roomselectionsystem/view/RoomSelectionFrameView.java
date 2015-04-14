@@ -52,7 +52,7 @@ public class RoomSelectionFrameView extends JFrame{
         String[] suiteOptions = { "Four Person Suite", "Six Person Suite" };
         String[] roomOptions = { "4K03", "3K03", "2K03", "1K03" };
         
-        selectButton = new JButton("Select");
+        selectButton = new JButton("       Select       ");
         
         constraints.fill = GridBagConstraints.CENTER;
         constraints.gridx = 0;
@@ -84,7 +84,10 @@ public class RoomSelectionFrameView extends JFrame{
         constraints.insets = new Insets(0,10,10,10);
         roomSelectionPanel.add(roomCombo, constraints);
         
+        constraints.fill = GridBagConstraints.CENTER;
+        constraints.gridx = 0;
         constraints.gridy = 2;
+        constraints.gridwidth = 4;
         constraints.insets = new Insets(20,10,10,10);
         roomSelectionPanel.add(selectButton, constraints);
         
