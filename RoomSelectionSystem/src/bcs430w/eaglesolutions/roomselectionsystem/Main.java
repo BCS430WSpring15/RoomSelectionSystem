@@ -10,6 +10,7 @@ import bcs430w.eaglesolutions.roomselectionsystem.controller.LoginFrameControlle
 import bcs430w.eaglesolutions.roomselectionsystem.controller.MainFrameController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.RoomSelectionFrameController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.SignUpStudentController;
+import bcs430w.eaglesolutions.roomselectionsystem.controller.RemoveStudentController;
 import bcs430w.eaglesolutions.roomselectionsystem.view.HousingApplicationView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.LoginFrameView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.MainFrameView;
@@ -27,16 +28,18 @@ public class Main {
     private static void run(){
         MainFrameView mainFrameView = new MainFrameView();
         MainFrameController mainFrameController = new MainFrameController(mainFrameView);
-        //mainFrameController.initializeView();
+        mainFrameController.initializeView();
         LoginFrameView loginFrameView = new LoginFrameView();
         LoginFrameController loginFrameController = new LoginFrameController(loginFrameView);
-        //loginFrameController.initializeView();
+        loginFrameController.initializeView();
         RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
         RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
         //roomSelectionFrameController.initializeView();
         HousingApplicationController housingApplicationController = new HousingApplicationController();
         //housingApplicationController.initializeView();
         SignUpStudentController signUpStudentController = new SignUpStudentController();
-        signUpStudentController.initializeView();
+        //signUpStudentController.initializeView();
+        RemoveStudentController RemoveStudentController = new RemoveStudentController();
+        //RemoveStudentController.initializeView();
     }
 }
