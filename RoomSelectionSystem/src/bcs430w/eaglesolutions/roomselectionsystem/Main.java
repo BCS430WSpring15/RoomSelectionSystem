@@ -35,9 +35,9 @@ public class Main {
         //loginFrameController.initializeView();
         RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
         RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
-        //roomSelectionFrameController.initializeView();
+        roomSelectionFrameController.initializeView();
         HousingApplicationController housingApplicationController = new HousingApplicationController();
-        //housingApplicationController.initializeView();
+        housingApplicationController.initializeView();
         SignUpStudentController signUpStudentController = new SignUpStudentController();
         //signUpStudentController.initializeView();
         RemoveStudentController removeStudentController = new RemoveStudentController();
