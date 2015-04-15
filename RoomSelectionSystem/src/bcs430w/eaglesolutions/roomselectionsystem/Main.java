@@ -12,6 +12,7 @@ import bcs430w.eaglesolutions.roomselectionsystem.controller.MainFrameController
 import bcs430w.eaglesolutions.roomselectionsystem.controller.RoomSelectionFrameController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.SignUpStudentController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.RemoveStudentController;
+import bcs430w.eaglesolutions.roomselectionsystem.controller.RoomSelectionFormController;
 import bcs430w.eaglesolutions.roomselectionsystem.view.HousingApplicationView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.LoginFrameView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.MainFrameView;
@@ -44,5 +45,7 @@ public class Main {
         //removeStudentController.initializeView();
         FinancialStatusController financialStatusController = new FinancialStatusController();
         //financialStatusController.initializeView();
+        RoomSelectionFormController roomSelectionFormController = new RoomSelectionFormController();
+        roomSelectionFormController.initializeView();
     }
 }
