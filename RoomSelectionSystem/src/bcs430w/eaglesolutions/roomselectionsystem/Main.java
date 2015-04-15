@@ -17,6 +17,9 @@ import bcs430w.eaglesolutions.roomselectionsystem.view.LoginFrameView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.MainFrameView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.RoomSelectionFrameView;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
 /**
  *
  * @author Jairo
@@ -30,9 +33,9 @@ public class Main {
         MainFrameView mainFrameView = new MainFrameView();
         MainFrameController mainFrameController = new MainFrameController(mainFrameView);
         //mainFrameController.initializeView();
-        LoginFrameView loginFrameView = new LoginFrameView();
-        LoginFrameController loginFrameController = new LoginFrameController(loginFrameView);
-        //loginFrameController.initializeView();
+        //LoginFrameView loginFrameView = new LoginFrameView();
+        LoginFrameController loginFrameController = new LoginFrameController();
+        loginFrameController.initializeView();
         RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
         RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
         //roomSelectionFrameController.initializeView();
@@ -44,5 +47,20 @@ public class Main {
         //removeStudentController.initializeView();
         FinancialStatusController financialStatusController = new FinancialStatusController();
         //financialStatusController.initializeView();
+        
+        TestEntity te = new TestEntity();
+        
+        /*EntityManagerFactory emf = javax.persistence.Persistence.createEntityManagerFactory("RoomSelectionSystemPU");
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        try {
+            em.persist(te);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            em.getTransaction().rollback();
+        } finally {
+            em.close();
+        }*/
     }
 }

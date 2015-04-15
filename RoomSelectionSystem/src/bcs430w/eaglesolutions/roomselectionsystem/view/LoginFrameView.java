@@ -38,6 +38,10 @@ public class LoginFrameView extends JFrame{
     private JPasswordField password;
     private JButton loginButton;
     
+    public JButton getLoginButton(){
+        return loginButton;
+    }
+    
     public LoginFrameView(){
         
         super("Room Selection System");
