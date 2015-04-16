@@ -37,8 +37,9 @@ public class FinancialStatusView extends JFrame {
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize().width/3, Toolkit.getDefaultToolkit().getScreenSize().height/3);
         this.setLocation(this.getSize().width, this.getSize().height);
         //this.setSize(1000, 500);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setResizable(false);
+        this.setAlwaysOnTop(true);
         
         financialStatusPanel = new JPanel(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
@@ -92,4 +93,6 @@ public class FinancialStatusView extends JFrame {
         
         this.add(financialStatusPanel);
     }
+    
+    
 }

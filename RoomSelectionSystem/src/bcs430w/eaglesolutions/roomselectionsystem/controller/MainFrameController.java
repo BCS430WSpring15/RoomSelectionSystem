@@ -6,6 +6,8 @@
 package bcs430w.eaglesolutions.roomselectionsystem.controller;
 
 import bcs430w.eaglesolutions.roomselectionsystem.view.MainFrameView;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  *
@@ -24,5 +26,19 @@ public class MainFrameController {
 
     public void initializeView(){
         mainFrameView.setVisible(true);
+        setGoToFinancialStatusListener();
+    }
+    
+    private void setGoToFinancialStatusListener(){
+        mainFrameView.getGoToFinancialStatus().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FinancialStatusController financialStatusController = new FinancialStatusController();
+                financialStatusController.setMainFrameView(mainFrameView);
+                financialStatusController.initializeView();
+                mainFrameView.setEnabled(false);
+            }
+        });
     }
 }

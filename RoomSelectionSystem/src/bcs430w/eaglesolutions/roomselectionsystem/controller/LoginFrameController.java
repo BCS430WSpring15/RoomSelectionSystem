@@ -18,7 +18,6 @@ public class LoginFrameController {
     
     public LoginFrameController(){
         loginFrameView = new LoginFrameView();
-        setLoginButtonActionListener();
     }
     
     public LoginFrameController(LoginFrameView view){
@@ -27,6 +26,7 @@ public class LoginFrameController {
     
     public void initializeView(){
         loginFrameView.setVisible(true);
+        setLoginButtonActionListener();
     }
     
     private void setLoginButtonActionListener(){
@@ -36,6 +36,7 @@ public class LoginFrameController {
             public void actionPerformed(ActionEvent e) {
                 MainFrameController mainFrameController = new MainFrameController();
                 mainFrameController.initializeView();
+                loginFrameView.dispose();
             }
         });
     }

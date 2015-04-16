@@ -31,12 +31,11 @@ public class Main {
     }
 	
     private static void run(){
-        MainFrameView mainFrameView = new MainFrameView();
-        MainFrameController mainFrameController = new MainFrameController(mainFrameView);
-        //mainFrameController.initializeView();
+        MainFrameController mainFrameController = new MainFrameController();
+        mainFrameController.initializeView();
         //LoginFrameView loginFrameView = new LoginFrameView();
         LoginFrameController loginFrameController = new LoginFrameController();
-        loginFrameController.initializeView();
+        //loginFrameController.initializeView();
         RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
         RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
         //roomSelectionFrameController.initializeView();
@@ -49,7 +48,7 @@ public class Main {
         FinancialStatusController financialStatusController = new FinancialStatusController();
         //financialStatusController.initializeView();
         RoomSelectionFormController roomSelectionFormController = new RoomSelectionFormController();
-        roomSelectionFormController.initializeView();
+        //roomSelectionFormController.initializeView();
         
         TestEntity te = new TestEntity();
         
