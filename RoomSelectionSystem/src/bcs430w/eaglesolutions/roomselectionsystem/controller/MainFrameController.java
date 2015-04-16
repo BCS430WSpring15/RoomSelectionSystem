@@ -28,7 +28,10 @@ public class MainFrameController {
         mainFrameView.setVisible(true);
         setGoToFinancialStatusListener();
      //   setGoToRemoveStudentListener();
+     //   setGoToRoomSelectionFormListener();
     }
+    
+     
     
     private void setGoToFinancialStatusListener(){
         mainFrameView.getGoToFinancialStatus().addActionListener(new ActionListener() {
@@ -40,9 +43,20 @@ public class MainFrameController {
                 financialStatusController.initializeView();
                 mainFrameView.setEnabled(false);
             }
+       /*       
+     private void setGoToRoomSelectionFormListener(){
+        mainFrameView.getGoToRoomSelectionForm().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RoomSelectionFormController RoomSelectionFormController = new RoomSelectionFormController();
+                RoomSelectionFormController.setMainFrameView(mainFrameView);
+                RoomSelectionFormController.initializeView();
+                mainFrameView.setEnabled(false);
+            }
        
         
-     /*       
+          
     private void setGoToRemoveStudentListener(){
         mainFrameView.getGoToRemoveStudent().addActionListener(new ActionListener() {
 
@@ -55,7 +69,7 @@ public class MainFrameController {
             }*/
         });
     }
-        }
+}
               
 
 

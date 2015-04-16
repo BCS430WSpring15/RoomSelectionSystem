@@ -6,6 +6,10 @@
 package bcs430w.eaglesolutions.roomselectionsystem.controller;
 
 import bcs430w.eaglesolutions.roomselectionsystem.view.RoomSelectionFormView;
+import bcs430w.eaglesolutions.roomselectionsystem.view.LoginFrameView;
+import bcs430w.eaglesolutions.roomselectionsystem.view.MainFrameView;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 /**
  *
@@ -13,6 +17,7 @@ import bcs430w.eaglesolutions.roomselectionsystem.view.RoomSelectionFormView;
  */
 public class RoomSelectionFormController {
     private RoomSelectionFormView roomSelectionFormView;
+    private MainFrameView mainFrameView;
     
     public RoomSelectionFormController(){
         roomSelectionFormView = new RoomSelectionFormView();
@@ -24,5 +29,48 @@ public class RoomSelectionFormController {
     
     public void initializeView(){
         roomSelectionFormView.setVisible(true);
+        setOncloseListener();
+    }
+
+    private void setOncloseListener(){
+        roomSelectionFormView.addWindowListener(new WindowListener() {
+
+            @Override
+            public void windowOpened(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                mainFrameView.setEnabled(true);
+                mainFrameView.toFront();
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+                
+            }
+        });
     }
 }
+
