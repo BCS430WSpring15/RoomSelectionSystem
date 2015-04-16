@@ -5,7 +5,11 @@
  */
 package bcs430w.eaglesolutions.roomselectionsystem.controller;
 
+import bcs430w.eaglesolutions.roomselectionsystem.view.MainFrameView;
+import bcs430w.eaglesolutions.roomselectionsystem.view.LoginFrameView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.RemoveStudentView;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 /**
  *
@@ -13,6 +17,8 @@ import bcs430w.eaglesolutions.roomselectionsystem.view.RemoveStudentView;
  */
 public class RemoveStudentController {
     private RemoveStudentView RemoveStudentView;
+     private MainFrameView mainFrameView;
+    
     
     public RemoveStudentController(){
         RemoveStudentView = new RemoveStudentView();
@@ -22,7 +28,53 @@ public class RemoveStudentController {
         RemoveStudentView = view;
     }
     
+       public void setMainFrameView(MainFrameView mainFrameView){
+        this.mainFrameView = mainFrameView;
+    }
+    
     public void initializeView(){
         RemoveStudentView.setVisible(true);
+         setOncloseListener();
+    }
+private void setOncloseListener(){
+        RemoveStudentView.addWindowListener(new WindowListener() {
+
+            @Override
+            public void windowOpened(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                mainFrameView.setEnabled(true);
+                mainFrameView.toFront();
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+                
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+                
+            }
+        });
     }
 }
+

@@ -33,22 +33,22 @@ public class Main {
     private static void run(){
         MainFrameController mainFrameController = new MainFrameController();
         mainFrameController.initializeView();
-        //LoginFrameView loginFrameView = new LoginFrameView();
+        LoginFrameView loginFrameView = new LoginFrameView();
         LoginFrameController loginFrameController = new LoginFrameController();
-        //loginFrameController.initializeView();
+        loginFrameController.initializeView();
         RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
         RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
-        //roomSelectionFrameController.initializeView();
+        roomSelectionFrameController.initializeView();
         HousingApplicationController housingApplicationController = new HousingApplicationController();
-        //housingApplicationController.initializeView();
+        housingApplicationController.initializeView();
         SignUpStudentController signUpStudentController = new SignUpStudentController();
-        //signUpStudentController.initializeView();
+        signUpStudentController.initializeView();
         RemoveStudentController removeStudentController = new RemoveStudentController();
-        //removeStudentController.initializeView();
+        removeStudentController.initializeView();
         FinancialStatusController financialStatusController = new FinancialStatusController();
-        //financialStatusController.initializeView();
+        financialStatusController.initializeView();
         RoomSelectionFormController roomSelectionFormController = new RoomSelectionFormController();
-        //roomSelectionFormController.initializeView();
+        roomSelectionFormController.initializeView();
         
         TestEntity te = new TestEntity();
         

@@ -27,6 +27,7 @@ public class MainFrameController {
     public void initializeView(){
         mainFrameView.setVisible(true);
         setGoToFinancialStatusListener();
+     //   setGoToRemoveStudentListener();
     }
     
     private void setGoToFinancialStatusListener(){
@@ -39,6 +40,23 @@ public class MainFrameController {
                 financialStatusController.initializeView();
                 mainFrameView.setEnabled(false);
             }
+       
+        
+     /*       
+    private void setGoToRemoveStudentListener(){
+        mainFrameView.getGoToRemoveStudent().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RemoveStudentController RemoveStudentController = new RemoveStudentController();
+                RemoveStudentController.setMainFrameView(mainFrameView);
+                RemoveStudentController.initializeView();
+                mainFrameView.setEnabled(false);
+            }*/
         });
     }
-}
+        }
+              
+
+
+
