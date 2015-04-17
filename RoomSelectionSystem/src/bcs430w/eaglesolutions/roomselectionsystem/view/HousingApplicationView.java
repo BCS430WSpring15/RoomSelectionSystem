@@ -77,7 +77,7 @@ public class HousingApplicationView extends JFrame{
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize().width-150, Toolkit.getDefaultToolkit().getScreenSize().height-100);
         this.setLocation(75, 25);
         //this.setSize(1000, 500);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setResizable(false);
         
         housingApplicationPanel = new JPanel(new GridBagLayout());

@@ -38,7 +38,7 @@ public class MainFrameView extends JFrame{
     private JPanel mainPanel;
     private JButton goToLogin;
     private JButton goToRoomSelection;
-    private JButton goToDormApplication;
+    private JButton goToHousingApplication;
     private JButton goToFinancialStatus;
     private JButton goToAddStudent;
     private JButton goToRemoveStudent;
@@ -67,9 +67,9 @@ public class MainFrameView extends JFrame{
         goToRoomSelection = new JButton("Room Selection");
         //goToRoomSelection.setAlignmentX(Component.CENTER_ALIGNMENT);
         goToRoomSelection.setPreferredSize(new Dimension(400, 30));
-        goToDormApplication = new JButton("Dorm Application");
+        goToHousingApplication = new JButton("Housing Application");
         //goToDormApplication.setAlignmentX(Component.CENTER_ALIGNMENT);
-        goToDormApplication.setPreferredSize(new Dimension(400, 30));
+        goToHousingApplication.setPreferredSize(new Dimension(400, 30));
         goToFinancialStatus = new JButton("Financial Status");
         //goToFinancialStatus.setAlignmentX(Component.CENTER_ALIGNMENT);
         goToFinancialStatus.setPreferredSize(new Dimension(400, 30));
@@ -99,7 +99,7 @@ public class MainFrameView extends JFrame{
         
         constraints.gridy = 3;
         //constraints.insets = new Insets(0,0,10,0);
-        mainPanel.add(goToDormApplication, constraints);
+        mainPanel.add(goToHousingApplication, constraints);
         
         constraints.gridy = 4;
         //constraints.insets = new Insets(0,0,10,0);
@@ -131,5 +131,9 @@ public class MainFrameView extends JFrame{
 
     public JButton getGoToFinancialStatus() {
         return goToFinancialStatus;
+    }
+
+    public JButton getGoToHousingApplication() {
+        return goToHousingApplication;
     }
 }

@@ -27,6 +27,7 @@ public class MainFrameController {
     public void initializeView(){
         mainFrameView.setVisible(true);
         setGoToFinancialStatusListener();
+        setGoToHousingApplication();
     }
     
     private void setGoToFinancialStatusListener(){
@@ -38,6 +39,17 @@ public class MainFrameController {
                 financialStatusController.setMainFrameView(mainFrameView);
                 financialStatusController.initializeView();
                 mainFrameView.setEnabled(false);
+            }
+        });
+    }
+    
+    private void setGoToHousingApplication(){
+        mainFrameView.getGoToHousingApplication().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HousingApplicationController housingApplicationController = new HousingApplicationController();
+                housingApplicationController.initializeView();
             }
         });
     }
