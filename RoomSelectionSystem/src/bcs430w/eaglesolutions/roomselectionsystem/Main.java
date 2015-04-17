@@ -18,8 +18,8 @@ import bcs430w.eaglesolutions.roomselectionsystem.view.LoginFrameView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.MainFrameView;
 import bcs430w.eaglesolutions.roomselectionsystem.view.RoomSelectionFrameView;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
+//import javax.persistence.EntityManager;
+//import javax.persistence.EntityManagerFactory;
 
 /**
  *
@@ -32,10 +32,10 @@ public class Main {
 	
     private static void run(){
         MainFrameController mainFrameController = new MainFrameController();
-        mainFrameController.initializeView();
-        //LoginFrameView loginFrameView = new LoginFrameView();
+        //mainFrameController.initializeView();
+        LoginFrameView loginFrameView = new LoginFrameView();
         LoginFrameController loginFrameController = new LoginFrameController();
-        //loginFrameController.initializeView();
+        loginFrameController.initializeView();
         RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
         RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
         //roomSelectionFrameController.initializeView();

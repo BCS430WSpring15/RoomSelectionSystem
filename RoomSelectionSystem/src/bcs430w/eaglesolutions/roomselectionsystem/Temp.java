@@ -6,15 +6,15 @@
 package bcs430w.eaglesolutions.roomselectionsystem;
 
 import java.io.Serializable;
-import javax.persistence.*;
+//import javax.persistence.*;
 /**
  *
  * @author Angelo
  */
-@Entity
+//@Entity
 public class Temp implements Serializable{
     private static final long serialVersionUID = 1L;
-    @Id @GeneratedValue
+    //@Id @GeneratedValue
     private long id;
     
     private int x;

@@ -28,7 +28,7 @@ import javax.swing.JTextField;
  * @author Jairo
  */
 public class RemoveStudentView extends JFrame{
-        private JPanel loginPanel;
+    private JPanel loginPanel;
     //private JPanel fieldsPanel;
     private JLabel loginLabel;
     private JLabel usernameLabel;

@@ -28,7 +28,11 @@ public class MainFrameController {
         mainFrameView.setVisible(true);
         setGoToFinancialStatusListener();
         setGoToHousingApplication();
+        //setGoToRemoveStudentListener();
+        //setGoToRoomSelectionFormListener();
     }
+    
+     
     
     private void setGoToFinancialStatusListener(){
         mainFrameView.getGoToFinancialStatus().addActionListener(new ActionListener() {
@@ -42,6 +46,34 @@ public class MainFrameController {
             }
         });
     }
+    /*      
+    private void setGoToRoomSelectionFormListener(){
+        mainFrameView.getGoToRoomSelectionForm().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RoomSelectionFormController RoomSelectionFormController = new RoomSelectionFormController();
+                RoomSelectionFormController.setMainFrameView(mainFrameView);
+                RoomSelectionFormController.initializeView();
+                mainFrameView.setEnabled(false);
+            }
+        });
+    }
+    */
+        
+    /* 
+    private void setGoToRemoveStudentListener(){
+        mainFrameView.getGoToRemoveStudent().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RemoveStudentController RemoveStudentController = new RemoveStudentController();
+                RemoveStudentController.setMainFrameView(mainFrameView);
+                RemoveStudentController.initializeView();
+                mainFrameView.setEnabled(false);
+            }
+        });
+    }*/
     
     private void setGoToHousingApplication(){
         mainFrameView.getGoToHousingApplication().addActionListener(new ActionListener() {
@@ -54,3 +86,7 @@ public class MainFrameController {
         });
     }
 }
+              
+
+
+
