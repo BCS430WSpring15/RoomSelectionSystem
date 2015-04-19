@@ -8,6 +8,8 @@ package bcs430w.eaglesolutions.roomselectionsystem.controller;
 import bcs430w.eaglesolutions.roomselectionsystem.view.LoginFrameView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  *
@@ -27,6 +29,38 @@ public class LoginFrameController {
     public void initializeView(){
         loginFrameView.setVisible(true);
         setLoginButtonActionListener();
+        setForgotPasswordListener();
+    }
+    
+    private void setForgotPasswordListener(){
+        loginFrameView.getForgotPassLabel().addMouseListener(new MouseListener() {
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ForgotPasswordController forgotPasswordController = new ForgotPasswordController();
+                forgotPasswordController.initializeView();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        });
     }
     
     private void setLoginButtonActionListener(){
@@ -34,9 +68,22 @@ public class LoginFrameController {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                MainFrameController mainFrameController = new MainFrameController();
-                mainFrameController.initializeView();
-                loginFrameView.dispose();
+                if(loginFrameView.getStaffRadio().isSelected()){
+                    String pass = new String(loginFrameView.getPassword().getPassword()); 
+                    if(loginFrameView.getUsername().getText().equals("admin") && pass.equals("123")){
+                        //loginFrameView.getErrorLabel().setText("Accepted");
+                        MainFrameController mainFrameController = new MainFrameController();
+                        mainFrameController.initializeView();
+                        loginFrameView.dispose();
+                    }
+                }
+                else if(loginFrameView.getStudentRadio().isSelected()){
+                    loginFrameView.getErrorLabel().setText("Student selected");
+                }
+                //if(loginFrameView.getErrorLabel().equals("admin") && loginFrameView.getErrorLabel().equals("123"))
+                //MainFrameController mainFrameController = new MainFrameController();
+                //mainFrameController.initializeView();
+                //loginFrameView.dispose();
             }
         });
     }

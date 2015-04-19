@@ -5,6 +5,7 @@
  */
 package bcs430w.eaglesolutions.roomselectionsystem.view;
 
+import java.awt.Color;
 import java.awt.ComponentOrientation;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -15,12 +16,14 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.Toolkit;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 /**
@@ -34,19 +37,36 @@ public class LoginFrameView extends JFrame{
     private JLabel usernameLabel;
     private JLabel passwordLabel;
     private JLabel forgotPassLabel;
+    private JLabel errorLabel;
     private JTextField username;
     private JPasswordField password;
     private JButton loginButton;
+    private JRadioButton staffRadio;
+    private JRadioButton studentRadio;
+    private ButtonGroup buttonGroup;
+    private JPanel groupPanel;
     
     public JButton getLoginButton(){
         return loginButton;
     }
     
+    public JLabel getErrorLabel(){
+        return errorLabel;
+    }
+    
+    public JRadioButton getStaffRadio(){
+        return staffRadio;
+    }
+    
+    public JRadioButton getStudentRadio(){
+        return studentRadio;
+    }
+    
     public LoginFrameView(){
         
         super("Room Selection System");
-        this.setSize(Toolkit.getDefaultToolkit().getScreenSize().width/3, Toolkit.getDefaultToolkit().getScreenSize().height/3);
-        this.setLocation(this.getSize().width, this.getSize().height);
+        this.setSize(Toolkit.getDefaultToolkit().getScreenSize().width/3, (Toolkit.getDefaultToolkit().getScreenSize().height/3+(50)));
+        this.setLocation(this.getSize().width, this.getSize().height-100);
         //this.setSize(1000, 500);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
@@ -61,6 +81,8 @@ public class LoginFrameView extends JFrame{
         forgotPassLabel = new JLabel("Forgot Password");
         usernameLabel = new JLabel("User name:");
         passwordLabel = new JLabel("Password:");
+        errorLabel = new JLabel("   ");
+        errorLabel.setForeground(Color.RED);
         
         username = new JTextField(15);
         password = new JPasswordField(15);
@@ -106,21 +128,42 @@ public class LoginFrameView extends JFrame{
         //constraints.gridy = 2;
         loginPanel.add(password, constraints);
         
-        //constraints.weightx = 0.5;
-        //constraints.weighty = 1;
-        //constraints.fill = GridBagConstraints.HORIZONTAL;
+        staffRadio = new JRadioButton("Staff");
+        studentRadio = new JRadioButton("Student");
+        buttonGroup = new ButtonGroup();
+        buttonGroup.add(staffRadio);
+        buttonGroup.add(studentRadio);
+        groupPanel = new JPanel();
+        studentRadio.setSelected(true);
+        groupPanel.add(studentRadio);
+        groupPanel.add(staffRadio);
         constraints.gridx = 0;
         constraints.gridy = 3;
         constraints.gridwidth = 2;
+        loginPanel.add(groupPanel, constraints);
+        
+        //constraints.weightx = 0.5;
+        //constraints.weighty = 1;
+        //constraints.fill = GridBagConstraints.HORIZONTAL;
+        //constraints.gridx = 0;
+        constraints.gridy = 4;
+        //constraints.gridwidth = 2;
         //loginButton.setSize(loginButton.getSize().width, 530);
         loginPanel.add(loginButton, constraints);
         
         constraints.fill = GridBagConstraints.CENTER;
         //constraints.gridx = 0;
-        constraints.gridy = 4;
+        constraints.gridy = 5;
         //constraints.gridwidth = 2;
         constraints.insets = new Insets(10,0,0,0);
-        loginPanel.add(forgotPassLabel, constraints);       
+        loginPanel.add(forgotPassLabel, constraints);
+        
+        //constraints.fill = GridBagConstraints.CENTER;
+        //constraints.gridx = 0;
+        constraints.gridy = 6;
+        //constraints.gridwidth = 2;
+        constraints.insets = new Insets(10,0,0,0);
+        loginPanel.add(errorLabel, constraints);
         
         /*FlowLayout loginPanelLayout = new FlowLayout(FlowLayout.CENTER, 10, 15);
         loginPanelLayout.setAlignment(FlowLayout.CENTER);
@@ -154,5 +197,26 @@ public class LoginFrameView extends JFrame{
         loginPanel.add(loginButton);
         */
         this.add(loginPanel);
+    }
+
+    /**
+     * @return the username
+     */
+    public JTextField getUsername() {
+        return username;
+    }
+
+    /**
+     * @return the password
+     */
+    public JPasswordField getPassword() {
+        return password;
+    }
+
+    /**
+     * @return the forgotPassLabel
+     */
+    public JLabel getForgotPassLabel() {
+        return forgotPassLabel;
     }
 }
