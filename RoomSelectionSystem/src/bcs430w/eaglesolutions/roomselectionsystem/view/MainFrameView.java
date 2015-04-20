@@ -136,4 +136,11 @@ public class MainFrameView extends JFrame{
     public JButton getGoToHousingApplication() {
         return goToHousingApplication;
     }
+
+    /**
+     * @return the goToRemoveStudent
+     */
+    public JButton getGoToRemoveStudent() {
+        return goToRemoveStudent;
+    }
 }
