@@ -12,6 +12,7 @@ import bcs430w.eaglesolutions.roomselectionsystem.view.SignUpStudentView;
  * @author Jairo
  */
 public class SignUpStudentController {
+    
     private SignUpStudentView signUpStudentView;
     
     public SignUpStudentController(){

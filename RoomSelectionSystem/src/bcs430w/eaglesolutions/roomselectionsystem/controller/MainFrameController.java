@@ -30,6 +30,7 @@ public class MainFrameController {
         setGoToHousingApplication();
         setGoToRemoveStudentListener();
         setGoToRoomSelectionFormListener();
+        setGoToSignUpStudent();
     }
     
      
@@ -53,9 +54,9 @@ public class MainFrameController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 RoomSelectionFormController RoomSelectionFormController = new RoomSelectionFormController();
-                RoomSelectionFormController.setMainFrameView(mainFrameView);
+          //      RoomSelectionFormController.setMainFrameView(mainFrameView);
                 RoomSelectionFormController.initializeView();
-                mainFrameView.setEnabled(false);
+          //      mainFrameView.setEnabled(false);
             }
         });
     }
@@ -68,13 +69,25 @@ public class MainFrameController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 RemoveStudentController RemoveStudentController = new RemoveStudentController();
-                RemoveStudentController.setMainFrameView(mainFrameView);
+            //    RemoveStudentController.setMainFrameView(mainFrameView);
                 RemoveStudentController.initializeView();
-                mainFrameView.setEnabled(false);
+           //     mainFrameView.setEnabled(false);
             }
         });
     
+    }
     
+      private void setGoToSignUpStudent(){
+        mainFrameView.getGoToSignUpStudent().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SignUpStudentController SignUpStudentController = new SignUpStudentController();
+                SignUpStudentController.initializeView();
+            }
+        });
+    }
+
     private void setGoToHousingApplication(){
         mainFrameView.getGoToHousingApplication().addActionListener(new ActionListener() {
 
