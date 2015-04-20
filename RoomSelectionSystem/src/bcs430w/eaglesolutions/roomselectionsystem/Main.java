@@ -32,22 +32,21 @@ public class Main {
 	
     private static void run(){
         MainFrameController mainFrameController = new MainFrameController();
-        //mainFrameController.initializeView();
-        LoginFrameView loginFrameView = new LoginFrameView();
-        LoginFrameController loginFrameController = new LoginFrameController();
-        loginFrameController.initializeView();
-        RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
-        RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
+        mainFrameController.initializeView();
+        //LoginFrameController loginFrameController = new LoginFrameController();
+        //loginFrameController.initializeView();
+        //RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
+        //RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
         //roomSelectionFrameController.initializeView();
-        HousingApplicationController housingApplicationController = new HousingApplicationController();
+        //HousingApplicationController housingApplicationController = new HousingApplicationController();
         //housingApplicationController.initializeView();
-        SignUpStudentController signUpStudentController = new SignUpStudentController();
+        //SignUpStudentController signUpStudentController = new SignUpStudentController();
         //signUpStudentController.initializeView();
-        RemoveStudentController removeStudentController = new RemoveStudentController();
+        //RemoveStudentController removeStudentController = new RemoveStudentController();
         //removeStudentController.initializeView();
-        FinancialStatusController financialStatusController = new FinancialStatusController();
+        //FinancialStatusController financialStatusController = new FinancialStatusController();
         //financialStatusController.initializeView();
-        RoomSelectionFormController roomSelectionFormController = new RoomSelectionFormController();
+        //RoomSelectionFormController roomSelectionFormController = new RoomSelectionFormController();
         //roomSelectionFormController.initializeView();
         
         TestEntity te = new TestEntity();

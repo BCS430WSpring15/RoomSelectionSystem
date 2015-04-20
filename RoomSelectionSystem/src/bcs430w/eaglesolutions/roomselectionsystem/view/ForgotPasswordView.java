@@ -26,7 +26,7 @@ public class ForgotPasswordView extends JFrame{
     public ForgotPasswordView(){
         super("Room Selection System");
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize().width/3, (Toolkit.getDefaultToolkit().getScreenSize().height/3+(50)));
-        this.setLocation(this.getSize().width, this.getSize().height);
+        this.setLocation(this.getSize().width, this.getSize().height-100);
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setResizable(false);
         

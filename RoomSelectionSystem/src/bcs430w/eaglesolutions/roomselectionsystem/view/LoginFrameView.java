@@ -16,7 +16,13 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
@@ -25,6 +31,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -41,6 +48,7 @@ public class LoginFrameView extends JFrame{
     private JTextField username;
     private JPasswordField password;
     private JButton loginButton;
+    private JLabel signUpLabel;
     private JRadioButton staffRadio;
     private JRadioButton studentRadio;
     private ButtonGroup buttonGroup;
@@ -70,6 +78,14 @@ public class LoginFrameView extends JFrame{
         //this.setSize(1000, 500);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
+        try {
+            //this.setIconImage(Toolkit.getDefaultToolkit().getImage(System.getProperty("user.dir")+"resources\\logo.png"));
+            //this.setIconImage(new ImageIcon(getClass().getResource(System.getProperty("user.dir")+"\\resources\\logo.png")).getImage());
+            this.setIconImage(ImageIO.read(new File(System.getProperty("user.dir")+"\\resources\\logo.png")));
+        } catch (IOException ex) {
+            //System.out.println(System.getProperty("user.dir")+"\\resources\\logo.png");
+        }
+        //System.out.println(System.getProperty("user.dir")+"\\resources\\logo.png");
         
         loginPanel = new JPanel(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
@@ -79,20 +95,25 @@ public class LoginFrameView extends JFrame{
         loginLabel.setFont(new Font("Tekton Pro", NORMAL, 30));
         
         forgotPassLabel = new JLabel("Forgot Password");
-        forgotPassLabel.setForeground(Color.red);
+        forgotPassLabel.setForeground(Color.blue);
         usernameLabel = new JLabel("User name:");
         usernameLabel.setForeground(Color.blue);
         passwordLabel = new JLabel("Password:");
         errorLabel = new JLabel("   ");
-        errorLabel.setForeground(Color.RED);
+        errorLabel.setForeground(Color.red);
         passwordLabel.setForeground(Color.blue);
         
         username = new JTextField(15);
         password = new JPasswordField(15);
         
-        loginButton = new JButton("Login");
+        loginButton = new JButton("Login", new ImageIcon(System.getProperty("user.dir")+"\\resources\\Actions-go-next-icon.png"));
+        loginButton.setIconTextGap(75);
+        loginButton.setHorizontalTextPosition(SwingConstants.LEFT);
+        loginButton.setHorizontalAlignment(SwingConstants.RIGHT);
         loginButton.setForeground(Color.blue);
-         
+        
+        signUpLabel = new JLabel("Sign Up");
+        signUpLabel.setForeground(Color.blue);         
          
         //constraints.weightx = 0.5;
         //constraints.weighty = 0.5;
@@ -154,14 +175,18 @@ public class LoginFrameView extends JFrame{
         constraints.gridy = 4;
         //constraints.gridwidth = 2;
         //loginButton.setSize(loginButton.getSize().width, 530);
-        loginPanel.add(loginButton, constraints);
+        loginPanel.add(loginButton, constraints);        
         
         constraints.fill = GridBagConstraints.CENTER;
+        groupPanel = new JPanel();
+        groupPanel.add(forgotPassLabel);
+        groupPanel.add(new JLabel("    |    "));
+        groupPanel.add(signUpLabel);        
         //constraints.gridx = 0;
         constraints.gridy = 5;
         //constraints.gridwidth = 2;
         constraints.insets = new Insets(10,0,0,0);
-        loginPanel.add(forgotPassLabel, constraints);
+        loginPanel.add(groupPanel, constraints);
         
         //constraints.fill = GridBagConstraints.CENTER;
         //constraints.gridx = 0;
@@ -226,5 +251,12 @@ public class LoginFrameView extends JFrame{
      */
     public JLabel getForgotPassLabel() {
         return forgotPassLabel;
+    }
+
+    /**
+     * @return the signUpLabel
+     */
+    public JLabel getSignUpLabel() {
+        return signUpLabel;
     }
 }

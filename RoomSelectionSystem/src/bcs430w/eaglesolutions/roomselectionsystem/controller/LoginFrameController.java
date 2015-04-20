@@ -30,6 +30,7 @@ public class LoginFrameController {
         loginFrameView.setVisible(true);
         setLoginButtonActionListener();
         setForgotPasswordListener();
+        setSignUpListener();
     }
     
     private void setForgotPasswordListener(){
@@ -39,6 +40,36 @@ public class LoginFrameController {
             public void mouseClicked(MouseEvent e) {
                 ForgotPasswordController forgotPasswordController = new ForgotPasswordController();
                 forgotPasswordController.initializeView();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        });
+    }
+    
+    private void setSignUpListener(){
+        loginFrameView.getSignUpLabel().addMouseListener(new MouseListener() {
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                //System.out.println(System.getProperty("user.dir")+"\\resources\\logo.png");
             }
 
             @Override
@@ -78,7 +109,7 @@ public class LoginFrameController {
                     }
                 }
                 else if(loginFrameView.getStudentRadio().isSelected()){
-                    loginFrameView.getErrorLabel().setText("Student selected");
+                    //loginFrameView.getErrorLabel().setText("Student selected");
                 }
                 //if(loginFrameView.getErrorLabel().equals("admin") && loginFrameView.getErrorLabel().equals("123"))
                 //MainFrameController mainFrameController = new MainFrameController();

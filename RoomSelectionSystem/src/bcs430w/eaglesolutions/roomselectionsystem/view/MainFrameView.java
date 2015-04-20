@@ -16,6 +16,9 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -50,6 +53,14 @@ public class MainFrameView extends JFrame{
         //this.setSize(1000, 500);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
+        try {
+            //this.setIconImage(Toolkit.getDefaultToolkit().getImage(System.getProperty("user.dir")+"resources\\logo.png"));
+            //this.setIconImage(new ImageIcon(getClass().getResource(System.getProperty("user.dir")+"\\resources\\logo.png")).getImage());
+            this.setIconImage(ImageIO.read(new File(System.getProperty("user.dir")+"\\resources\\logo.png")));
+        } catch (IOException ex) {
+            //System.out.println(System.getProperty("user.dir")+"\\resources\\logo.png");
+        }
+ 
         
         mainPanel = new JPanel(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
