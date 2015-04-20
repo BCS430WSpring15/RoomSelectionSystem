@@ -5,6 +5,7 @@
  */
 package bcs430w.eaglesolutions.roomselectionsystem.view;
 
+import java.awt.Color;
 import java.awt.ComponentOrientation;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -59,14 +60,19 @@ public class LoginFrameView extends JFrame{
         loginLabel.setFont(new Font("Tekton Pro", NORMAL, 30));
         
         forgotPassLabel = new JLabel("Forgot Password");
+        forgotPassLabel.setForeground(Color.red);
         usernameLabel = new JLabel("User name:");
+        usernameLabel.setForeground(Color.blue);
         passwordLabel = new JLabel("Password:");
+        passwordLabel.setForeground(Color.blue);
         
         username = new JTextField(15);
         password = new JPasswordField(15);
         
         loginButton = new JButton("Login");
-        
+        loginButton.setForeground(Color.blue);
+         
+         
         //constraints.weightx = 0.5;
         //constraints.weighty = 0.5;
         constraints.fill = GridBagConstraints.CENTER;
@@ -154,5 +160,8 @@ public class LoginFrameView extends JFrame{
         loginPanel.add(loginButton);
         */
         this.add(loginPanel);
+        
+        
+       
     }
 }
