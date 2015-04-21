@@ -40,6 +40,8 @@ public class LoginFrameController {
             public void mouseClicked(MouseEvent e) {
                 ForgotPasswordController forgotPasswordController = new ForgotPasswordController();
                 forgotPasswordController.initializeView();
+                forgotPasswordController.setLoginFrameView(loginFrameView);
+                loginFrameView.setEnabled(false);
             }
 
             @Override
@@ -100,7 +102,7 @@ public class LoginFrameController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(loginFrameView.getStaffRadio().isSelected()){
-                    String pass = new String(loginFrameView.getPassword().getPassword()); 
+                    String pass = new String(loginFrameView.getPassword().getPassword());
                     if(loginFrameView.getUsername().getText().equals("admin") && pass.equals("123")){
                         //loginFrameView.getErrorLabel().setText("Accepted");
                         MainFrameController mainFrameController = new MainFrameController();

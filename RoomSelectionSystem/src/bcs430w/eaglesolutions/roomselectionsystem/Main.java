@@ -6,6 +6,7 @@
 package bcs430w.eaglesolutions.roomselectionsystem;
 
 import bcs430w.eaglesolutions.roomselectionsystem.controller.FinancialStatusController;
+import bcs430w.eaglesolutions.roomselectionsystem.controller.ForgotPasswordController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.HousingApplicationController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.LoginFrameController;
 import bcs430w.eaglesolutions.roomselectionsystem.controller.MainFrameController;
@@ -31,10 +32,10 @@ public class Main {
     }
 	
     private static void run(){
-        MainFrameController mainFrameController = new MainFrameController();
-        mainFrameController.initializeView();
-        //LoginFrameController loginFrameController = new LoginFrameController();
-        //loginFrameController.initializeView();
+        //MainFrameController mainFrameController = new MainFrameController();
+        //mainFrameController.initializeView();
+        LoginFrameController loginFrameController = new LoginFrameController();
+        loginFrameController.initializeView();
         //RoomSelectionFrameView roomSelectionFrameView = new RoomSelectionFrameView();
         //RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController(roomSelectionFrameView);
         //roomSelectionFrameController.initializeView();
@@ -48,8 +49,10 @@ public class Main {
         //financialStatusController.initializeView();
         //RoomSelectionFormController roomSelectionFormController = new RoomSelectionFormController();
         //roomSelectionFormController.initializeView();
+        //ForgotPasswordController forgotPasswordController = new ForgotPasswordController();
+        //forgotPasswordController.initializeView();
         
-        TestEntity te = new TestEntity();
+        //TestEntity te = new TestEntity();
         
         /*EntityManagerFactory emf = javax.persistence.Persistence.createEntityManagerFactory("RoomSelectionSystemPU");
         EntityManager em = emf.createEntityManager();
