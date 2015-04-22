@@ -102,7 +102,7 @@ public class MainFrameView extends JFrame{
         constraints.gridy = 1;
         //constraints.gridwidth = 1;
         constraints.insets = new Insets(10,0,10,0);
-        mainPanel.add(goToLogin, constraints);
+        //mainPanel.add(goToLogin, constraints);
         
         constraints.gridy = 2;
         constraints.insets = new Insets(0,0,10,0);
@@ -117,7 +117,7 @@ public class MainFrameView extends JFrame{
         mainPanel.add(goToFinancialStatus, constraints);
         
         constraints.gridy = 5;
-        mainPanel.add(goToAddStudent, constraints);
+        //mainPanel.add(goToAddStudent, constraints);
         
         constraints.gridy = 6;
         mainPanel.add(goToRemoveStudent, constraints);
@@ -153,5 +153,12 @@ public class MainFrameView extends JFrame{
      */
     public JButton getGoToRemoveStudent() {
         return goToRemoveStudent;
+    }
+
+    /**
+     * @return the goToRoomSelection
+     */
+    public JButton getGoToRoomSelection() {
+        return goToRoomSelection;
     }
 }

@@ -29,6 +29,7 @@ public class MainFrameController {
         setGoToFinancialStatusListener();
         setGoToHousingApplication();
         setGoToRemoveStudentListener();
+        setGoToRoomSelection();
         //setGoToRoomSelectionFormListener();
         //setGoToSignUpStudent();
     }
@@ -96,6 +97,20 @@ public class MainFrameController {
             public void actionPerformed(ActionEvent e) {
                 HousingApplicationController housingApplicationController = new HousingApplicationController();
                 housingApplicationController.initializeView();
+                
+            }
+        });
+    }
+    
+    private void setGoToRoomSelection(){
+        mainFrameView.getGoToRoomSelection().addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RoomSelectionFrameController roomSelectionFrameController = new RoomSelectionFrameController();
+                roomSelectionFrameController.setMainFrameView(mainFrameView);
+                roomSelectionFrameController.initializeView();
+                mainFrameView.setEnabled(false);
             }
         });
     }

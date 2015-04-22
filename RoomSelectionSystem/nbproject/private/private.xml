@@ -5,10 +5,12 @@
         <group>
             <file>file:/C:/RoomSelectionSystem/RoomSelectionSystem/src/bcs430w/eaglesolutions/roomselectionsystem/view/MainFrameView.java</file>
             <file>file:/C:/RoomSelectionSystem/RoomSelectionSystem/src/bcs430w/eaglesolutions/roomselectionsystem/controller/ForgotPasswordController.java</file>
+            <file>file:/C:/RoomSelectionSystem/RoomSelectionSystem/src/bcs430w/eaglesolutions/roomselectionsystem/controller/FinancialStatusController.java</file>
             <file>file:/C:/RoomSelectionSystem/RoomSelectionSystem/src/bcs430w/eaglesolutions/roomselectionsystem/Main.java</file>
             <file>file:/C:/RoomSelectionSystem/RoomSelectionSystem/src/bcs430w/eaglesolutions/roomselectionsystem/controller/LoginFrameController.java</file>
             <file>file:/C:/RoomSelectionSystem/RoomSelectionSystem/src/bcs430w/eaglesolutions/roomselectionsystem/view/ForgotPasswordView.java</file>
             <file>file:/C:/RoomSelectionSystem/RoomSelectionSystem/src/bcs430w/eaglesolutions/roomselectionsystem/view/LoginFrameView.java</file>
+            <file>file:/C:/RoomSelectionSystem/RoomSelectionSystem/src/bcs430w/eaglesolutions/roomselectionsystem/view/FinancialStatusView.java</file>
         </group>
     </open-files>
 </project-private>

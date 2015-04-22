@@ -38,7 +38,7 @@ public class RoomSelectionFrameView extends JFrame{
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize().width/3, Toolkit.getDefaultToolkit().getScreenSize().height/3);
         this.setLocation(this.getSize().width, this.getSize().height);
         //this.setSize(1000, 500);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setResizable(false);
         
         roomSelectionPanel = new JPanel(new GridBagLayout());
@@ -69,22 +69,26 @@ public class RoomSelectionFrameView extends JFrame{
         roomSelectionPanel.add(buildingCombo, constraints);
         
         floorCombo = new JComboBox(floorOptions);
+        floorCombo.setEnabled(false);
         constraints.weightx = 0.5;
         //constraints.weighty = 1;
         constraints.gridx = 1;
         roomSelectionPanel.add(floorCombo, constraints);
         
         suiteCombo = new JComboBox(suiteOptions);
+        suiteCombo.setEnabled(false);
         constraints.gridx = 2;
         roomSelectionPanel.add(suiteCombo, constraints);
         suiteCombo = new JComboBox(suiteOptions);
         
         roomCombo = new JComboBox(roomOptions);
+        roomCombo.setEnabled(false);
         constraints.gridx = 3;
         constraints.insets = new Insets(0,10,10,10);
         roomSelectionPanel.add(roomCombo, constraints);
         
         constraints.fill = GridBagConstraints.CENTER;
+        selectButton.setEnabled(false);
         constraints.gridx = 0;
         constraints.gridy = 2;
         constraints.gridwidth = 4;
@@ -92,5 +96,40 @@ public class RoomSelectionFrameView extends JFrame{
         roomSelectionPanel.add(selectButton, constraints);
         
         this.add(roomSelectionPanel);
+    }
+
+    /**
+     * @return the buildingCombo
+     */
+    public JComboBox getBuildingCombo() {
+        return buildingCombo;
+    }
+
+    /**
+     * @return the floorCombo
+     */
+    public JComboBox getFloorCombo() {
+        return floorCombo;
+    }
+
+    /**
+     * @return the suiteCombo
+     */
+    public JComboBox getSuiteCombo() {
+        return suiteCombo;
+    }
+
+    /**
+     * @return the roomCombo
+     */
+    public JComboBox getRoomCombo() {
+        return roomCombo;
+    }
+
+    /**
+     * @return the selectButton
+     */
+    public JButton getSelectButton() {
+        return selectButton;
     }
 }
